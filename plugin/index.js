@@ -35,7 +35,7 @@
                 var router      = params.router,
                     middleware  = params.middleware,
                     controllers = params.controllers,
-                    apiUri      = '/api/ns/login';
+                    apiUri      = '/api-ns-login';
 
                 router.post(
                     apiUri,
@@ -102,7 +102,7 @@
                             }
                         ], function (error, user) {
                             if (error) {
-                                return res.status(403).json({
+                                return res.json({
                                     message: error.message
                                 });
                             }
